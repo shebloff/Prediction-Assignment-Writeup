@@ -54,7 +54,7 @@ clean_data <- predict(preObj,train[,-l])
 ```
 
 ##Prediction
-The accuracy of KNN is 0.9643
+The accuracy of KNN is 0.9643, which would give us an out of sample error of 1-0.9643= 0.0357
 
 ```r
 modelFit <- train(train$classe ~.,data=clean_data, method="knn")
