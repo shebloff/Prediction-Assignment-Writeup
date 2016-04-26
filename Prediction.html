@@ -145,7 +145,7 @@ clean_data &lt;- predict(preObj,train[,-l])</code></pre>
 </div>
 <div id="prediction" class="section level2">
 <h2>Prediction</h2>
-<p>The accuracy of KNN is 0.9643</p>
+<p>The accuracy of KNN is 0.9643, which would give us an out of sample error of 1-0.9643= 0.0357</p>
 <pre class="r"><code>modelFit &lt;- train(train$classe ~.,data=clean_data, method=&quot;knn&quot;)
 testresult &lt;- predict(preObj, test[,-length(test)])
 confusionMatrix(test$classe, predict(modelFit,testresult))</code></pre>
